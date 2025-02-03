@@ -13,9 +13,9 @@ document.getElementById('addButton').addEventListener('click', function() {
         removeButton.addEventListener('click', function() {
             taskList.removeChild(taskItem);
         });
-
-        taskItem.appendChild(removeButton);
+        //for add into list
         taskList.appendChild(taskItem);
+        taskItem.appendChild(removeButton);
 
         taskInput.value = '';
     }

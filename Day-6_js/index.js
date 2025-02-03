@@ -13,4 +13,4 @@ for(let i=num;i<=num1;i++){
     if (count==0){
         console.log(i)
     }
-}//5-->30
+}

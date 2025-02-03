@@ -4,21 +4,14 @@
 // Use a for loop to iterate from 1 to 20.
 // Use an if statement to check if a number is even and print it.
 
-// let num1=+prompt("Enter your Starting Number for printing Even Numbers")
-// let num2=+prompt("Enter your Ending Number for printing Even Numbers")
-// let off = 0
-// if(num1>num2){
-//     num1=num1
-//     num2=num2
-// }
-// else{
-//     off = num1
-//     num1 = num2
-//     num2 = off
-
-// }
-// console.log(num1,num2)
-
+let num1=+prompt("Enter your Starting Number for printing Even Numbers")
+let num2=+prompt("Enter your Ending Number for printing Even Numbers")
+let off = 0
+if(num1>num2){
+    off = num1
+    num1 = num2
+    num2 = off
+}
 
 
 // let num1 = +prompt("Enter your Starting Number for printing Even Numbers");
