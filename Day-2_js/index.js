@@ -32,7 +32,7 @@ console.log(s1)
 //  Use nested ternary operators to classify the score into grades: A (>= 90), B (>= 75), C (>= 60), D (>= 45), and F (below 45). Log the grade.
 
 var marks=+prompt("Enter Your Marks")
-var grade=(marks>=90)? "A" : (marks>=75)? "B" :(marks>=60)? "C" :(marks>=45)? "D" : "F"
+var grade=(marks>=90) ? "A" : (marks>=75) ? "B" : (marks>=60) ? "C" : (marks>=45)? "D" : "F"
 console.log(grade)
 
 // Temperature Check: Declare a variable temperature and 
