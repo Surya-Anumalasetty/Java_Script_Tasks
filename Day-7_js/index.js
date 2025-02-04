@@ -61,10 +61,10 @@ else {
 // The function should return the square of num.
 // Call the function with different numbers and print the results.
 
-function sqr(num){
-    return num*num
+function sqr(num) {
+    return num * num
 }
-num=+prompt("Enter a Number for Square : ")
+num = +prompt("Enter a Number for Square : ")
 console.log(sqr(num))
 
 
@@ -79,18 +79,18 @@ console.log(sqr(num))
 // Call the function with different arrays and print the results.
 
 
-function avg(array){
-    let sum=0;
-    for(i in array){
-        sum+=array[i]
+function avg(array) {
+    let sum = 0;
+    for (i in array) {
+        sum += array[i]
     }
-    return sum/(array.length)
+    return sum / (array.length)
 }
-let size=+prompt("Enter Size of the array : ")
-let array=[]
-for(let i=0; i<size; i++) {
-        array[i]=+prompt("Enter your "+ i + " Number:")
-    }
+let size = +prompt("Enter Size of the array : ")
+let array = []
+for (let i = 0; i < size; i++) {
+    array[i] = +prompt("Enter your " + i + " Number:")
+}
 console.log(avg(array))
 
 
@@ -106,25 +106,25 @@ console.log(avg(array))
 
 
 
-function cons(str){
-    let count=0
-    array=['a','e','i','o','u']
-    for(i of str){
-        for(j of array){
-            if (i == j){
-                count=1
+function cons(str) {
+    let count = 0
+    array = ['a', 'e', 'i', 'o', 'u']
+    for (i of str) {
+        for (j of array) {
+            if (i == j) {
+                count = 1
             }
         }
     }
     // console.log(count)
-    if(count>0){
+    if (count > 0) {
         return "it contains vowels"
     }
-    else{
+    else {
         return "it doesnt contains vowels"
     }
 }
-let str=prompt("Enter a String:")
+let str = prompt("Enter a String:")
 console.log(cons(str))
 
 
