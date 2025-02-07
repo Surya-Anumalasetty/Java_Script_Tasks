@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards_using_js</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,24%);
+        /* text-align: center; */
+        gap: 1%;
+        margin:1% 2%;
+
+    }
+    p{
+        background-color: black;
+        color: white;
+        width: 45%;
+        font-size: 20px;
+        top: 0;
+    }
+</style>
+<body>
+</body>
+<script>
+    var container=document.createElement("div")
+    container.setAttribute("class","container")
+    let para=["Summer House","Brick House","Renovated","Barn House"]
+    let images=["./img/img1.png","./img/img2.png","./img/img3.png","./img/img4.png","./img/img2.png","./img/img1.png","./img/img4.png","./img/img3.png"]
+    for(i=0;i<images.length;i++){
+        
+        var child=document.createElement("div")
+        var img=document.createElement("img")
+        var p=document.createElement("p")
+        // img.setAttribute("src",images[i])
+        child.style.backgroundImage=`url(${images[i]})`
+        child.style.width="100"
+        child.style.height="200px"
+        child.style.backgroundSize="contain"
+        child.style.backgroundRepeat="no-repeat"
+        // child.style.margin="20px"
+        if (i>=4){
+            p.innerText=para[i-4]
+        }
+        else{
+            p.innerText=para[i]
+        }
+        p.style.display="inline"
+        p.style.right="0%"
+        document.body.append(container)
+        container.appendChild(child)
+        child.append(img)
+        child.append(p)
+        console.log(container)
+    }
+</script>
+</html>
