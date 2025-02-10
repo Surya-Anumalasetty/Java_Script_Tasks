@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *,body{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,24%);
+        /* text-align: center; */
+        gap: 1%;
+        margin:1% 2%;
+
+    }
+    .p{
+        background-color: black;
+        color: white;
+        width: 45%;
+        font-size: 20px;
+        top: 0;
+    }
+    .about_container{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main_dispaly{
+        display: flex;
+        letter-spacing: 3px;
+        gap: 10px;
+        color: white;
+    }
+    .main_dispaly p{
+        font-size: 30px;
+    }
+    .main_dispaly h1{
+        background-color: rgba(0, 0, 0,.5);
+        padding: 3px;
+        border-radius: 2px;
+    }
+    .nav{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        justify-content: space-between;
+        background-color: aliceblue;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav1{
+        justify-content: flex-start;
+        /* background-color: aqua; */
+        letter-spacing: 3px;
+        padding: 20px;
+
+    }
+    .nav2{
+        display: flex;
+        /* background-color: blue; */
+        justify-content: space-between;
+        letter-spacing: 3px;
+        padding: 20px;
+
+    }
+</style>
+<body>
+    <!-- <img src="./img/bg.png" alt=""> -->
+</body>
+<script>
+    //nav_bar
+    let nav=document.createElement("nav")
+    nav.setAttribute("class","nav")
+    let nav1=document.createElement("div")
+    nav1.setAttribute("class","nav1")
+    let nav2=document.createElement("div")
+    nav2.setAttribute("class","nav2")
+    let nav1_p=document.createElement("p")
+    let nav2_p1=document.createElement("a")
+    let nav2_p2=document.createElement("p")
+    let nav2_p3=document.createElement("p")
+    nav1_p.innerHTML="<span><p>B R Architect</p></span>"
+    nav2_p1.innerHTML="Projects"
+    nav2_p1.setAttribute("src","#project")
+    nav2_p2.innerHTML="About"
+    nav2_p3.innerHTML="Contact"
+    nav1.append(nav1_p)
+    nav2.append(nav2_p1,nav2_p2,nav2_p3)
+    nav.append(nav1,nav2)
+    document.body.append(nav)
+
+    //main
+    let main= document.createElement("div")
+    main.setAttribute("class","main")
+    main.style.backgroundImage="url(./img/bg.png)"
+    main.style.width="100%"
+    main.style.height="100vh"
+    let text=document.createElement("h1")
+    let main1_p=document.createElement("p")
+    main1_p.setAttribute("class","main_dispaly")
+    // let main2_p=document.createElement("p")
+    main1_p.innerHTML="<h1><span>BR</span></h1> <p>Architects</p>"
+    main.append(main1_p)
+    document.body.append(main)
+    //Cards Section start
+
+    let projects=document.createElement("div")
+    projects.setAttribute("id","project")
+    let card=document.createElement("h1")
+    card.innerHTML="Projects"
+    card.style.margin="1%"
+    projects.append(card)
+    let hr3=document.createElement("hr")
+    hr3.style.margin="1%"
+    projects.append(hr3)
+    var container=document.createElement("div")
+    container.setAttribute("class","container")
+    let para=["Summer House","Brick House","Renovated","Barn House"]
+    let images=["./img/img1.png","./img/img2.png","./img/img3.png","./img/img4.png","./img/img2.png","./img/img1.png","./img/img4.png","./img/img3.png"]
+    for(i=0;i<images.length;i++){
+        
+        var child=document.createElement("div")
+        var img11=document.createElement("img")
+        var p=document.createElement("p")
+        p.setAttribute("class","p")
+        child.style.backgroundImage=`url(${images[i]})`
+        child.style.width="100"
+        child.style.height="200px"
+        child.style.backgroundSize="contain"
+        child.style.backgroundRepeat="no-repeat"
+        if (i>=4){
+            p.innerText=para[i-4]
+        }
+        else{
+            p.innerText=para[i]
+        }
+        p.style.display="inline"
+        p.style.right="0%"
+        projects.append(container)
+        container.appendChild(child)
+        child.append(img11,p)
+
+    }
+    document.body.append(projects)
+
+    //Card Section End
+    //About Section
+    var about=document.createElement("div")
+    about.setAttribute("id","About")
+    about.style.margin="1%"
+    let about_head=document.createElement("h1")
+    about_head.innerText="About"
+    let hr=document.createElement("hr")
+    let about_para=document.createElement("p")
+    let about_container=document.createElement("div")
+    about_container.setAttribute("class","about_container")
+    about_para.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    about_para.style.padding="1%"
+    about_para.style.lineHeight="110%"
+    let about_img=["./img/img5_about.png","./img/img_6.png","./img/img-8.png","./img/img-9.png"]
+    let about_para1=["John Doe","John Doe","Mike Ross","Dan Star"]
+    let about_para2=["CEO & Founder","Architect","Architect","Architect"]
+    // console.log(about_head)
+    // console.log(about_para)
+    // console.log(about);
+    document.body.append(about)
+    about.append(about_head,hr,about_para)
+    // about.appendChild(hr)
+    // about.appendChild(about_para)
+    for(i=0;i<about_img.length;i++){
+        let about_div=document.createElement("div")
+        about_div.style.margin="2%"
+        let inner_img=document.createElement("img")
+        inner_img.src=about_img[i]
+        inner_img.style.width="100%"
+        // inner_img.style.margin="1%"
+        about_div.append(inner_img)
+        let about_p1=document.createElement("h2")
+        about_p1.innerText=about_para1[i]
+        about_p1.style.margin="1% 0%"
+        about_div.append(about_p1)//added to about_div
+        let about_p2=document.createElement("p")
+        about_p2.innerText=about_para2[i]
+        about_p2.style.margin="2% 0%"
+        about_div.append(about_p2)//added to about_div
+        let about_p3=document.createElement("p")
+        about_p3.style.margin="2% 0%"
+        about_p3.innerText="Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."
+        about_div.append(about_p3)//added to about_div
+        let about_button=document.createElement("button")
+        about_button.innerText="Contact"
+        about_button.style.width="100%"
+        about_div.append(about_button)//added to about_div
+        about_container.append(about_div)//about_div added to about_conatiner
+    }
+    about.append(about_container)//about_container added to about main page to display
+    //Contact info start
+    
+    let contact=document.createElement("div")
+    contact.setAttribute("id","contact")
+    contact.style.margin="1%"
+    let contact_head=document.createElement("h1")
+    let hr1=document.createElement("hr")
+    let contact_para=document.createElement("p")
+    contact_head.innerText="Contact"
+    contact_para.innerText="Lets get in touch and talk about your next project."
+    contact.append(contact_head,hr1,contact_para)
+    // contact.appendChild(hr1)
+    // contact.appendChild(contact_para)
+    let name_input=["Name","Email","Subject","Comment"]
+    document.body.append(contact)
+    let box=document.createElement("div")
+    for(i=0;i<name_input.length;i++){
+        let contact_input=document.createElement("input")
+        contact_input.placeholder = name_input[i];
+        contact_input.style.width="96%"
+        contact_input.style.margin="1% 0%"
+        contact_input.style.padding="1%"
+
+        box.appendChild(contact_input)
+    }
+    contact.append(box)
+    let submit=document.createElement("button")
+    submit.innerText="SEND MESSAGE"
+    submit.style.padding="1%"
+    contact.append(submit)
+    let img=document.createElement("div")
+    let img_pic=document.createElement("img")
+    img_pic.src="./img/image.png"
+    img.style.margin="1%"
+    img_pic.style.width="98%"
+    img.style.width="99.5%"
+    img.append(img_pic)
+    document.body.append(img)
+
+</script>
+</html>

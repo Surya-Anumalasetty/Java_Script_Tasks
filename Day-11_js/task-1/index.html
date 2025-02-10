@@ -37,7 +37,7 @@
     for(i=0;i<images.length;i++){
         
         var child=document.createElement("div")
-        var img=document.createElement("img")
+        var img11=document.createElement("img")
         var p=document.createElement("p")
         // img.setAttribute("src",images[i])
         child.style.backgroundImage=`url(${images[i]})`
@@ -56,7 +56,7 @@
         p.style.right="0%"
         document.body.append(container)
         container.appendChild(child)
-        child.append(img)
+        child.append(img11)
         child.append(p)
         console.log(container)
     }
