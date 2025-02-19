@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../Day-11_js/task-1/img/img1.png" alt="">
+    <button onclick="fun()">Html</button>
+    <button onclick="fun1()">css</button>
+    <button onclick="fun2()">js</button>
+    <br>
+    <p id="para">Hi Coder</p>
+    <button onclick="changeText()">Click me!</button>
+</body>
+<script>
+    function fun(){
+        let img=document.querySelector("img")
+        img.setAttribute("src","../Day-11_js/task-1/img/img2.png")
+
+    }
+    function fun1(){
+        let img=document.querySelector("img")
+        img.setAttribute("src","../Day-11_js/task-1/img/img3.png")
+
+    }
+    function fun2(){
+        let img=document.querySelector("img")
+        img.setAttribute("src","../Day-11_js/task-1/img/img4.png")
+
+    }
+    function changeText(){
+        let su=document.getElementById("para")
+        su.innerHTML="Welcome to 10K Coders"
+        // su.classList.toggle("remove")
+    }
+</script>
+</html>

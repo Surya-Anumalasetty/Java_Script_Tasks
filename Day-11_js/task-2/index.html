@@ -56,13 +56,14 @@
         background-color: aliceblue;
         position: fixed;
         width: 100%;
-        z-index: 1;
+        /* z-index: -1; */
+        margin-bottom: 100px;
     }
     .nav1{
         justify-content: flex-start;
         /* background-color: aqua; */
         letter-spacing: 3px;
-        padding: 20px;
+        padding: 10px;
 
     }
     .nav2{
@@ -70,8 +71,17 @@
         /* background-color: blue; */
         justify-content: space-between;
         letter-spacing: 3px;
-        padding: 20px;
+        padding: 10px;
 
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        background-color: black;
+        color: #fff;
+        /* padding: 1%; */
     }
 </style>
 <body>
@@ -87,13 +97,17 @@
     nav2.setAttribute("class","nav2")
     let nav1_p=document.createElement("p")
     let nav2_p1=document.createElement("a")
-    let nav2_p2=document.createElement("p")
-    let nav2_p3=document.createElement("p")
+    let nav2_p2=document.createElement("a")
+    let nav2_p3=document.createElement("a")
     nav1_p.innerHTML="<span><p>B R Architect</p></span>"
     nav2_p1.innerHTML="Projects"
-    nav2_p1.setAttribute("src","#project")
+    nav2_p1.setAttribute("href","#project")
     nav2_p2.innerHTML="About"
+    nav2_p2.setAttribute("href","#About")
+
     nav2_p3.innerHTML="Contact"
+    nav2_p3.setAttribute("href","#contact")
+
     nav1.append(nav1_p)
     nav2.append(nav2_p1,nav2_p2,nav2_p3)
     nav.append(nav1,nav2)
@@ -104,6 +118,7 @@
     main.setAttribute("class","main")
     main.style.backgroundImage="url(./img/bg.png)"
     main.style.width="100%"
+    // main.style.marginTop="20px"
     main.style.height="100vh"
     let text=document.createElement("h1")
     let main1_p=document.createElement("p")
@@ -158,6 +173,7 @@
     var about=document.createElement("div")
     about.setAttribute("id","About")
     about.style.margin="1%"
+    // about.style.marginBottom="10%"
     let about_head=document.createElement("h1")
     about_head.innerText="About"
     let hr=document.createElement("hr")
